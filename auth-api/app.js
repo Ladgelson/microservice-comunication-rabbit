@@ -1,6 +1,6 @@
 import express from "express";
 
-import {createInitialData} from "./src/config/db/initialData.js";
+import { createInitialData } from "./src/config/db/initialData.js";
 import userRoute from "./src/modules/user/routes/UserRoute.js";
 
 const app = express();
@@ -20,7 +20,6 @@ app.get("/api/status", (req, res) => {
       httpStatus: 200
    });
 });
-
 
 app.listen(PORT, () => {
     console.info(`Server started successfully at port ${PORT}`);

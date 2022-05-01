@@ -7,8 +7,14 @@ export async function createInitialData() {
     let password = await bcrypt.hash("123456", 10);
 
     await User.create({
-        name: "User test",
-        email: "fakeemail@gmail.com",
+        name: "Adam Fake",
+        email: "fakeemail1@gmail.com",
+        password
+    });
+
+    await User.create({
+        name: "Sther Fake",
+        email: "fakeemail2@gmail.com",
         password
     });
 }
