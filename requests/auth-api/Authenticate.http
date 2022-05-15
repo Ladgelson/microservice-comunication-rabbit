@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/user/auth
+Content-Type: application/json
+
+{
+  "email": "fakeemail1@gmail.com",
+  "password": "123456"
+}

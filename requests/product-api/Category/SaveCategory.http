@@ -1,0 +1,4 @@
+POST http://localhost:8081/v1/categories
+Content-Type: application/json
+
+{"description":  null}

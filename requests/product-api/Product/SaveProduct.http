@@ -1,0 +1,9 @@
+POST http://localhost:8081/v1/products
+Content-Type: application/json
+
+{
+  "name": "O poder do sono",
+  "quantityAvailable": 10,
+  "categoryId": 3000,
+  "supplierId": 2001
+}
