@@ -1,13 +1,12 @@
 package br.com.cursoudemy.productapi.modules.product.service;
 
-import br.com.cursoudemy.productapi.modules.category.dto.CategoryResponse;
 import br.com.cursoudemy.productapi.modules.category.model.Category;
 import br.com.cursoudemy.productapi.modules.category.service.CategoryService;
 import br.com.cursoudemy.productapi.modules.product.dto.ProductRequest;
 import br.com.cursoudemy.productapi.modules.product.dto.ProductResponse;
+import br.com.cursoudemy.productapi.modules.product.dto.ProductStockDTO;
 import br.com.cursoudemy.productapi.modules.product.model.Product;
 import br.com.cursoudemy.productapi.modules.product.repository.ProductRepository;
-import br.com.cursoudemy.productapi.modules.supplier.dto.SupplierResponse;
 import br.com.cursoudemy.productapi.modules.supplier.model.Supplier;
 import br.com.cursoudemy.productapi.modules.supplier.service.SupplierService;
 import lombok.AllArgsConstructor;
@@ -29,5 +28,8 @@ public class ProductService {
         Product product = Product.of(productRequest, supplier, category);
         product = productRepository.save(product);
         return ProductResponse.of(product);
+    }
+
+    public void updateProductStock(ProductStockDTO productStockDTO) {
     }
 }
